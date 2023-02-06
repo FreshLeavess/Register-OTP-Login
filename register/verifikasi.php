@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$conn = mysqli_connect("localhost","root","","littleproject");
+$conn = mysqli_connect("localhost","root","","");
 
 if(isset($_POST["buttonverif"])) { 
    
@@ -35,7 +35,7 @@ if(isset($_POST["buttonverif"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verifikasi</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body class="align">
 

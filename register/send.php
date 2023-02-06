@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$conn = mysqli_connect("localhost","root","","littleproject");
+$conn = mysqli_connect("localhost","root","","");
 
 $username = $_POST["username"];
 $email = $_POST["email"];
@@ -30,17 +30,17 @@ $mail = new PHPMailer(true);
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'insan.nazal@gmail.com';                     //SMTP username
-    $mail->Password   = 'uujqfoxdzkxwklhd';                               //SMTP password
+    $mail->Username   = 'example@gmail.com';                     //SMTP username
+    $mail->Password   = '';                               //SMTP password
     $mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
 
-    $mail->setFrom('insan.nazal@gmail.com', 'Insan');
+    $mail->setFrom('example@gmail.com', 'ur name');
     $mail->addAddress($email);     //Add a recipient
 
     $mail->isHTML(false);                                  //Set email format to HTML
-    $mail->Subject = 'OTP FreshLeavess';
+    $mail->Subject = '';
     $mail->Body    =  $numRandom ;
 
     $mail->send();
